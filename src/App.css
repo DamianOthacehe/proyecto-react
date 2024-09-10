@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/*
+font-family: "Montserrat", sans-serif;
+font-family: "Lato", sans-serif;
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1{
+  font-family: "Montserrat", sans-serif;
+  font-weight:700;
+  color: #f66f14;
+  text-shadow: 12px 8px 13px black;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding-right: 70px;
+}
+
+p{
+  font-family: "Montserrat", sans-serif;
+
+}
+
+body{
+  background-image: url(./assets/fondo-byn.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: transparent;
+}
+
+nav a{
+  padding: .5rem;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+}
+
+nav ul li{
+  padding: 20px;}
+
+nav ul li a{
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  text-shadow: 12px 8px 13px black;
+  /* box-shadow: 0 0 1px 4px; */
+  background-color: rgba(0, 0, 0, 0.301);
+}
+
+
+
+.carrito{
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  gap: .5rem;
+  color: white;
+  font-weight: bold;
+}
+
+.carrito button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

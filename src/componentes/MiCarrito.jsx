@@ -10,8 +10,10 @@ export default function MiCarrito({numero}){
 
     return(
         <>
-        <button className="carrito" onClick={clickCarrito}><img src="./src/assets/carrito-de-compras.png" alt="" /></button>
-        <p>{contador}</p>
+        <div className="carrito">
+            <p>{contador}</p>
+            <button onClick={clickCarrito}><img src="./src/assets/carrito-de-compras-1.png" alt="carrito" width={"50px"} /></button>
+        </div>
         </>
     )
 }

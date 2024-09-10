@@ -7,18 +7,21 @@ function App() {
   return (
     <>
     <header>
-      <a href="" className="logo"><img src="./src/assets/logo.jpg" alt="logo" /></a>
       <nav>
-        
-      <MiNavbar texto = "Productos"/>
-      <MiNavbar texto = "Distribuidores"/>
-      <MiNavbar texto = "Manuales"/>
-      <MiNavbar texto = "Preguntas frecuentes"/>
-      <MiNavbar texto = "Ingresar/Registrarse"/>
-      </nav>
+      <a href="" className="logo"><img src="./src/assets/logo-30-sf.png" alt="logo" /></a>
+        <ul>
+        <MiNavbar texto = "Productos"/>
+        <MiNavbar texto = "Distribuidores"/>
+        <MiNavbar texto = "Manuales"/>
+        <MiNavbar texto = "Preguntas frecuentes"/>
+        <MiNavbar texto = "Ingresar/Registrarse"/>
+        </ul>
       <MiCarrito numero = {0}/>
+      </nav>
     </header>
-    <main></main>
+    <main>
+      <h1>Explorando nuevos horizontes</h1>
+    </main>
     <footer></footer>
     </>
   )
