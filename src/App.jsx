@@ -1,6 +1,8 @@
 import './App.css'
-import MiCarrito from './componentes/MiCarrito'
-import MiNavbar from './componentes/MiNavbar'
+import CartWidget from './componentes/CartWidget'
+import ItemListContainer from './componentes/ItemListContainer'
+import NavBar from './componentes/NavBar'
+
 
 function App() {
 
@@ -8,21 +10,23 @@ function App() {
     <>
     <header>
       <nav>
-      <a href="" className="logo"><img src="./src/assets/logo-30-sf.png" alt="logo" /></a>
+        <a href=""><img src="./src/assets/logo.jpg" alt="logo" /></a>
         <ul>
-        <MiNavbar texto = "Productos"/>
-        <MiNavbar texto = "Distribuidores"/>
-        <MiNavbar texto = "Manuales"/>
-        <MiNavbar texto = "Preguntas frecuentes"/>
-        <MiNavbar texto = "Ingresar/Registrarse"/>
+          <NavBar links = "Productos"/>
+          <NavBar links = "Manuales"/>
+          <NavBar links = "Distribuidores"/>
+          <NavBar links = "Preguntas Frecuentes"/>
+          <NavBar links = "Ingresar/Registrarse"/>
         </ul>
-      <MiCarrito numero = {0}/>
+        <CartWidget numero = {0}/>
       </nav>
     </header>
     <main>
-      <h1>Explorando nuevos horizontes</h1>
+      <ItemListContainer greeting = "Leinwand camping"/>
     </main>
-    <footer></footer>
+    <footer>
+
+    </footer>
     </>
   )
 }
