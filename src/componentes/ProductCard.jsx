@@ -7,7 +7,7 @@ export default function ({product}){
             <h4>{product.title}</h4>
             <img src={product.image} alt={product.title} />
             <p>{product.price}</p>
-            <button><Link to={`/product/${product.id}`}>Ver más</Link></button>
+            <button><Link to={`/item/${product.id}`}>Ver más</Link></button>
         </div>
         </>
     )
