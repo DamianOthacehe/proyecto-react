@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { getProduct } from "../asyncMock";
+import { getProductId } from "../asyncMock";
 import { useParams } from "react-router-dom";
 
 export default function ItemDetailContainer(){
@@ -9,7 +9,7 @@ const [product, setProduct] = useState([]);
 const {id} = useParams();
 
 useEffect(()=>{
-setProduct(getProduct(id));
+setProduct(getProductId(id));
 },[]);
 
     return(

@@ -88,6 +88,6 @@ export const getProducts = new Promise((resolve) => {
     }, 2000);
 });
 
-export const getProduct = (id) => {
-    return products.find((prod) => prod.id == id);
+export const getProductId = (id) => {
+    return products.find((element) => element.id == id);
 }
