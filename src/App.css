@@ -21,7 +21,7 @@ nav{
   align-items: center;
   flex-wrap: wrap;
 }
-
+/* 
 nav ul{
   display: flex;
 }
@@ -35,7 +35,7 @@ nav ul li a{
   text-decoration: none;
   font-weight: bold;
   color: #4772a9;
-}
+} */
 .carrito{
   display: flex;
   align-items: center;

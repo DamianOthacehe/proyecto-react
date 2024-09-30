@@ -1,33 +1,23 @@
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import './App.css'
-import CartWidget from './componentes/CartWidget'
 import ItemListContainer from './componentes/ItemListContainer'
+import ItemDetailContainer from './componentes/ItemDetailContainer'
 import NavBar from './componentes/NavBar'
 
 
 function App() {
 
   return (
-    <>
-    <header>
-      <nav>
-        <a href=""><img src="./src/assets/logo.jpg" alt="logo" /></a>
-        <ul>
-          <NavBar links = "Productos"/>
-          <NavBar links = "Manuales"/>
-          <NavBar links = "Distribuidores"/>
-          <NavBar links = "Preguntas Frecuentes"/>
-          <NavBar links = "Ingresar/Registrarse"/>
-        </ul>
-        <CartWidget numero = {0}/>
-      </nav>
-    </header>
-    <main>
-      <ItemListContainer greeting = "Leinwand camping"/>
-    </main>
-    <footer>
-
-    </footer>
-    </>
+    <BrowserRouter>
+    <NavBar/>
+    <Routes>
+      <Route exact path='/' element={<ItemListContainer/>}/>
+      <Route exact path='/avances' element={<ItemListContainer/>}/>
+      <Route exact path='/cocinas' element={<ItemListContainer/>}/>
+      <Route exact path='/explorers' element={<ItemListContainer/>}/>
+      <Route exact path='/product/:id' element={<ItemDetailContainer/>}/>
+    </Routes>
+    </BrowserRouter>
   )
 }
 
