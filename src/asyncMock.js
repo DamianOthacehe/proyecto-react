@@ -5,7 +5,7 @@ const products = [
         image: "https://plus.unsplash.com/premium_photo-1664287397511-9b037f603b99?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2FyYXZhbmF8ZW58MHx8MHx8fDA%3D",
         description: "Disfruta de tus aventuras al aire libre con el confort y la funcionalidad que solo el Ícaro puede ofrecer.",
         price: 3000,
-        category: "Avancés",
+        category: "Avances",
         features: "Espacio generoso, Ventilación superior, Acceso facilitado, Diseño adaptable",
     },
     {
@@ -14,7 +14,7 @@ const products = [
         image: "https://images.unsplash.com/photo-1518111742073-ddc0b2ce79e8?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2FyYXZhbmF8ZW58MHx8MHx8fDA%3D",
         description: "La perfecta combinación entre elegancia y practicidad.",
         price: 3000,
-        category: "Avancés",
+        category: "Avances",
         features: "Profundidad destacada, Diseño adaptable, Detalles de confort ",
     },
     {
@@ -23,7 +23,7 @@ const products = [
         image: "https://images.unsplash.com/photo-1523449885954-771e49c3f4da?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Y2FyYXZhbmF8ZW58MHx8MHx8fDA%3D",
         description: "Una solución práctica y eficiente para tus aventuras al aire libre.",
         price: 3000,
-        category: "Avancés",
+        category: "Avances",
         features: "Diseño versátil, Ventilación optimizada, Laterales funcionales",
     },
     {

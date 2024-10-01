@@ -5,17 +5,20 @@ import { useParams } from "react-router-dom";
 
 export default function ItemListContainer(){
 
-const{categoryId} = useParams();
-
-useEffect(()=>{
-
-},[])
-
 const [products, setProducts] = useState([]);
 
-useEffect(()=>{
-    getProducts.then(data=>setProducts(data));
-},[])
+const{categoryId} = useParams();
+
+
+useEffect(() => {
+    getProducts.then(data => {
+        if (categoryId) {
+            setProducts(data.filter(prod => prod.category.toLowerCase() === categoryId.toLowerCase()));
+        } else {
+            setProducts(data);
+        }
+    });
+}, [categoryId]);
 
     return(
         <>
