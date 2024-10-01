@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { getProducts } from "../asyncMock";
+import { getCategory, getProducts } from "../asyncMock";
 import ProductCard from "./ProductCard";
 import { useParams } from "react-router-dom";
 
@@ -8,17 +8,17 @@ export default function ItemListContainer(){
 const [products, setProducts] = useState([]);
 
 const{categoryId} = useParams();
-
+console.log(categoryId);
 
 useEffect(() => {
-    getProducts.then(data => {
-        if (categoryId) {
-            setProducts(data.filter(prod => prod.category.toLowerCase() === categoryId.toLowerCase()));
-        } else {
-            setProducts(data);
-        }
-    });
+    if (categoryId) {
+    const filteredProducts = getCategory(categoryId);
+    setProducts(filteredProducts);
+    } else {
+        getProducts.then((data) => setProducts(data));
+    }
 }, [categoryId]);
+
 
     return(
         <>

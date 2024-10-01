@@ -91,3 +91,7 @@ export const getProducts = new Promise((resolve) => {
 export const getProductId = (id) => {
     return products.find((element) => element.id == id);
 }
+
+export const getCategory = (categoryId) =>{
+    return products.filter((product) => product.category === categoryId);
+}
