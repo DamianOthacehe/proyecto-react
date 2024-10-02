@@ -1,0 +1,37 @@
+
+.card{
+    margin: 2rem;
+    width: 250px;
+    box-shadow: 1px 1px 20px black;
+    border-radius: 5%;
+    overflow: hidden;
+    background-color: rgb(224, 247, 248);
+}
+
+.card img{
+    width: 100%;
+}
+
+.card p{
+    padding: 8px;
+}
+
+.card button{
+    margin: 8px;
+    padding: 5px;
+    text-decoration: none;
+    width: 80%;
+    border-radius: 5px;
+}
+
+.card button a{
+    text-decoration: none;
+    color:midnightblue;
+    font-weight: bold;
+}
+
+.h3-h4{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+}

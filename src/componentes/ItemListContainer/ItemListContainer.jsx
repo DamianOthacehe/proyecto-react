@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { getCategory, getProducts } from "../asyncMock";
-import ProductCard from "./ProductCard";
+import { getCategory, getProducts } from "../../asyncMock";
+import ProductCard from "../ProductCard/ProductCard";
 import { useParams } from "react-router-dom";
+import './ItemListContainer.css'
 
 export default function ItemListContainer(){
 
@@ -23,7 +24,7 @@ useEffect(() => {
     return(
         <>
         <h1>PRODUCTOS</h1>
-        <div style={{display:"flex", flexDirection:"column", gap:10}}>
+        <div className="productos">
             {products.map(prod=><ProductCard key={prod.id} product={prod}/>)}
         </div>
         </>

@@ -1,0 +1,11 @@
+
+article{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.texto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}

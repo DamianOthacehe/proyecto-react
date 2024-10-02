@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './CartWidget.css'
 
 export default function CartWidget({ numero }) {
 

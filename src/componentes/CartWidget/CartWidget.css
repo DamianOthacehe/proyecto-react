@@ -1,0 +1,14 @@
+
+.carrito{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    color: #4772a9;
+    font-weight: bold;
+}
+
+.carrito button{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
