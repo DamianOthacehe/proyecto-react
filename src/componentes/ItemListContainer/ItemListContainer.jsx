@@ -10,7 +10,6 @@ const [products, setProducts] = useState([]);
 const [title, setTitle] = useState()
 
 const{categoryId} = useParams();
-console.log(categoryId);
 
 useEffect(() => {
     if (categoryId) {
