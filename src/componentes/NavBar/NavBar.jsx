@@ -12,7 +12,7 @@ export default function NavBar() {
                 <li><Link to={'/category/Cocinas'}>Cocinas</Link></li>
                 <li><Link to={'/category/Explorers'}>Explorers</Link></li>
             </ul>
-            <CartWidget numero={0}/>
+            <CartWidget/>
         </nav>
         </>
     );

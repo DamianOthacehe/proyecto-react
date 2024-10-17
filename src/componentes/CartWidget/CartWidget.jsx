@@ -1,19 +1,15 @@
 import { useState } from "react";
 import './CartWidget.css'
 
-export default function CartWidget({ numero }) {
+export default function CartWidget() {
 
-    const [contador, setContador] = useState(numero)
-
-    const clickCarrito = () => {
-        setContador(contador + 1)
-    }
+    const [contador, setContador] = useState()
 
     return (
         <>
             <div className="carrito">
-                <span>{contador}</span>
-                <button onClick={clickCarrito}><img src="./src/assets/carrito-de-compras.png" alt="carrito" /></button>
+                <span>{0}</span>
+                <button><img src="./src/assets/carrito-de-compras.png" alt="carrito" /></button>
             </div>
         </>
     );
