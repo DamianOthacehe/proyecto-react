@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { getCategory, getProducts } from "../../asyncMock";
-import ProductCard from "../ProductCard/ProductCard";
+import ItemCard from "../ItemCard/ItemCard";
 import { useParams } from "react-router-dom";
 import './ItemListContainer.css'
 
@@ -27,7 +27,7 @@ useEffect(() => {
         <>
         <h1>{title}</h1>
         <div className="productos">
-            {products.map(prod=><ProductCard key={prod.id} product={prod}/>)}
+            {products.map(prod=><ItemCard key={prod.id} product={prod}/>)}
         </div>
         </>
     );

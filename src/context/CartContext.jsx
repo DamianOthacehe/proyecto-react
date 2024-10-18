@@ -2,23 +2,27 @@ import { createContext, useEffect, useState } from "react";
 
 export const CartContext = createContext(false);
 
-export function CartProvider({children}){
+export function CartProvider({ children }) {
 
-    const[cart, setCart]=useState([]);
+    const [cart, setCart] = useState([]);
 
-
-    //agregar items al cart
     const addItem = (item) => {
-        setCart([...cart,item]);
-        console.log(cart);
+        const isInCart = cart.findIndex(cartItem => cartItem.id === item.id);
+        if (isInCart !== -1) {
+            const updatedCart = [...cart];
+            updatedCart[isInCart].quantity += item.quantity;
+            setCart(updatedCart);
+        } else {
+            setCart([...cart, item]);
+        }
     }
 
-    useEffect(()=>{
+    useEffect(() => {
+        console.log(cart);
+    }, [cart]);
 
-    },[]);
-
-    return(
-        <CartContext.Provider value={[cart, addItem]} >
+    return (
+        <CartContext.Provider value={[cart, setCart, addItem]} >
             {children}
         </CartContext.Provider>
     )

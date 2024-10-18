@@ -1,15 +1,18 @@
-import { useState } from "react";
+import { useContext } from "react";
 import './CartWidget.css'
+import { CartContext } from "../../context/cartContext";
+import { Link } from "react-router-dom";
+
 
 export default function CartWidget() {
 
-    const [contador, setContador] = useState()
+    const [cart] = useContext(CartContext);
 
     return (
         <>
             <div className="carrito">
-                <span>{0}</span>
-                <button><img src="./src/assets/carrito-de-compras.png" alt="carrito" /></button>
+                <span>{cart.length}</span>
+                <Link to={'/cart'}><img src="./src/assets/carrito-de-compras.png" alt="carrito" /></Link>
             </div>
         </>
     );

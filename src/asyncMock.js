@@ -7,6 +7,7 @@ const products = [
         price: 3000,
         category: "Avances",
         features: "Espacio generoso, Ventilación superior, Acceso facilitado, Diseño adaptable",
+        stock: 10,
     },
     {
         id: 2,
@@ -16,6 +17,7 @@ const products = [
         price: 3000,
         category: "Avances",
         features: "Profundidad destacada, Diseño adaptable, Detalles de confort ",
+        stock: 10,
     },
     {
         id: 3,
@@ -25,6 +27,7 @@ const products = [
         price: 3000,
         category: "Avances",
         features: "Diseño versátil, Ventilación optimizada, Laterales funcionales",
+        stock: 10,
     },
     {
         id: 4,
@@ -34,6 +37,7 @@ const products = [
         price: 1000,
         category: "Cocinas",
         features: "Espacio Generoso, Ventana Trasera Desplazada, Diseño Completo",
+        stock: 10,
     },
     {
         id: 5,
@@ -43,6 +47,7 @@ const products = [
         price: 1000,
         category: "Cocinas",
         features: "Espacio Ilimitado, Amplios Ventanales, Diseño Atractivo, Tapas en Todas las Ventanas",
+        stock: 10,
     },
     {
         id: 6,
@@ -52,6 +57,7 @@ const products = [
         price: 1000,
         category: "Cocinas",
         features: "Frontal Innovador, Espacio Amplio, Estilo Moderno",
+        stock: 10,
     },
     {
         id: 7,
@@ -61,6 +67,7 @@ const products = [
         price: 5000,
         category: "Explorers",
         features: "Diseño Único, Ventanas Enrollables, Sistema de Fijación Eficiente",
+        stock: 10,
     },
     {
         id: 8,
@@ -70,6 +77,7 @@ const products = [
         price: 5000,
         category: "Explorers",
         features: "Privacidad y Durabilidad, Ventanas Amplias, Mosquiteras Mejoradas, Sistema de Fijación Eficiente",
+        stock: 10,
     },
     {
         id: 9,
@@ -79,6 +87,7 @@ const products = [
         price: 5000,
         category: "Explorers",
         features: "Ventanas Amplias, Mosquiteras Mejoradas, Apertura de Puerta Lateral, Sistema Clip & Go",
+        stock: 10,
     },
 ]
 
