@@ -7,12 +7,13 @@ import { Link } from "react-router-dom";
 export default function CartWidget() {
 
     const [cart] = useContext(CartContext);
+    const handleCartClick = (e) => cart.length === 0 && (e.preventDefault(), alert("El carrito esta vacio"));
 
     return (
         <>
             <div className="carrito">
                 <span>{cart.length}</span>
-                <Link to={'/cart'}><img src="./src/assets/carrito-de-compras.png" alt="carrito" /></Link>
+                <Link to={'/cart'} onClick={handleCartClick}><img src="./src/assets/carrito-de-compras.png" alt="carrito" /></Link>
             </div>
         </>
     );

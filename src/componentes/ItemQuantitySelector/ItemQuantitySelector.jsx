@@ -11,9 +11,9 @@ export default function ItemQuantitySelector({ product, quantity, setQuantity })
 
     return (
         <>
-            <button onClick={handleSubtract}>-</button>
+            <button onClick={handleSubtract}>- 1</button>
             <span>{quantity}</span>
-            <button onClick={handleAdd}>+</button>
+            <button onClick={handleAdd}>+ 1</button>
         </>
     )
 }
