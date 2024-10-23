@@ -1,37 +1,71 @@
-
 .card{
     margin: 2rem;
     width: 250px;
-    box-shadow: 1px 1px 20px black;
-    border-radius: 5%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
     overflow: hidden;
     background-color: rgb(224, 247, 248);
+    /* transition: transform 0.2s ease, box-shadow 02s ease; */
 }
 
-.card img{
+/* .card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+} */
+
+.card-image{
     width: 100%;
+    height: 180px;
+    object-fit: cover;
 }
 
-.card p{
-    padding: 8px;
+.card-details{
+    padding: 1rem;
 }
 
-.card button{
-    margin: 8px;
-    padding: 5px;
-    text-decoration: none;
-    width: 80%;
-    border-radius: 5px;
-}
-
-.card button a{
-    text-decoration: none;
-    color:midnightblue;
+.card-title{
+    font-size: 1rem;
+    color: midnightblue;
+    margin: 0;
     font-weight: bold;
 }
 
-.h3-h4{
-    display: flex;
-    justify-content: space-between;
-    padding: 8px;
+.card-price{
+    font-size: 1rem;
+    color: darkslategray;
+    margin: 0.5rem 0;
+}
+
+.card-category{
+    font-size: 0.9rem;
+    color: gray;
+    margin: 0.5rem 0;
+}
+
+.card-button{
+    display: block;
+    margin: 0 auto 1rem;
+    padding: 0;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #4772a9;
+    color: white;
+    border: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.card-button:hover {
+    background-color: #355a84;
+}
+
+.card-link {
+    display: block;
+    padding: 0.5rem;
+    height: 100%;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
 }

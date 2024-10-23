@@ -15,3 +15,8 @@ h1{
   padding: 2rem;
 }
 
+.loader{
+  display: grid;
+  place-items: center;
+  height: 80vh;
+}

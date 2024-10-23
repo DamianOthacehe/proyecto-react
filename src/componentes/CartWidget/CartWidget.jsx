@@ -13,7 +13,7 @@ export default function CartWidget() {
         <>
             <div className="carrito">
                 <span>{cart.length}</span>
-                <Link to={'/cart'} onClick={handleCartClick}><img src="./src/assets/carrito-de-compras.png" alt="carrito" /></Link>
+                <Link to={'/cart'} onClick={handleCartClick}><img src="./public/carrito-de-compras.png" alt="carrito" /></Link>
             </div>
         </>
     );

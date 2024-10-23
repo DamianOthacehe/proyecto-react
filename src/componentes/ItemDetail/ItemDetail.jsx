@@ -8,20 +8,16 @@ export default function ItemDetail({ product }) {
     const [selectedQuantity, setSelectedQuantity] = useState(1)
 
     return (
-        <>
+        <div className='item-detail'>
             <h1> Detalles del producto</h1>
-            <article>
-                <div className="card">
-                    <img src={product.image} alt={product.title} />
-                    <h2>{product.title}</h2>
-                </div>
-                <div className="texto">
-                    <h4>{product.description}</h4>
-                    <p>{product.features}</p>
+            <article className='article'>
+                    <img className="image" src={product.image} alt={product.title} />
+                    <h2 className='title'>{product.title}</h2>
+                    <h4 className='description'>{product.description}</h4>
+                    <p className='features'>{product.features}</p>
                     <ItemQuantitySelector product={product} quantity={selectedQuantity} setQuantity={setSelectedQuantity} />
                     <AddItemButton product={product} quantity={selectedQuantity} />
-                </div>
             </article>
-        </>
+        </div>
     )
 }

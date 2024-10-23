@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { CartContext } from "../../context/cartContext";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
+import './checkout.css'
 
 
 export default function Form(){
@@ -25,16 +26,16 @@ export default function Form(){
 
     if(orderId){
         return(
-            <>
+            <div className="checkout">
             <h1> Gracias por tu compra</h1>
-            <p> Tu numero de orden es {orderId}</p>
-            </>
+            <p> Tu numero de orden es: {orderId}</p>
+            </div>
         )
     }
 
 
     return (
-        <>
+        <div className="checkout">
         <h1>Ingrese sus datos para finalizar la compra</h1>
         <h3>Los campos marcados con un * son obligatorios</h3>
         
@@ -56,6 +57,6 @@ export default function Form(){
                 <button type="submit">Finalizar compra</button>
             </form>
         </div>
-    </>
+    </div>
     )
 }

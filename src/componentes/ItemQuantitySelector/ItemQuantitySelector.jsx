@@ -1,3 +1,5 @@
+import '../itemDetail/itemDetail.css'
+
 
 export default function ItemQuantitySelector({ product, quantity, setQuantity }) {
 
@@ -10,10 +12,10 @@ export default function ItemQuantitySelector({ product, quantity, setQuantity })
     }
 
     return (
-        <>
+        <div className='quantity-selector' >
             <button onClick={handleSubtract}>- 1</button>
             <span>{quantity}</span>
             <button onClick={handleAdd}>+ 1</button>
-        </>
+        </div>
     )
 }

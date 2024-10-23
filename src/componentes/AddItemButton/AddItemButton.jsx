@@ -1,5 +1,6 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/cartContext"
+import '../itemDetail/itemDetail.css'
 
 export default function AddItemButton({ product, quantity }) {
 
@@ -11,7 +12,7 @@ export default function AddItemButton({ product, quantity }) {
 
     return (
         <>
-            <button onClick={handleAddToCart}>Agregar al carrito</button>
+            <button className='add-item' onClick={handleAddToCart}>Agregar al carrito</button>
         </>
     )
 }
