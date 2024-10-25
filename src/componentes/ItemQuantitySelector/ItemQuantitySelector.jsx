@@ -13,9 +13,9 @@ export default function ItemQuantitySelector({ product, quantity, setQuantity })
 
     return (
         <div className='quantity-selector' >
-            <button onClick={handleSubtract}>- 1</button>
+            <button onClick={handleSubtract}>-</button>
             <span>{quantity}</span>
-            <button onClick={handleAdd}>+ 1</button>
+            <button onClick={handleAdd}>+</button>
         </div>
     )
 }

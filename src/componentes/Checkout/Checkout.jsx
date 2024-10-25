@@ -11,14 +11,15 @@ export default function Form(){
     const [orderId, setOrderId] = useState("");
     const { register, handleSubmit } = useForm();
 
-    const [cart] = useContext(CartContext);
+    const [cart, setCart] = useContext(CartContext);
 
     const send = (data) => {
         const order = {
+            date: new Date(),
             buyer: data,
             items: cart
         }
-        console.log(order);
+        setCart([]);
 
         const orderRef = collection(db, "orders");
         addDoc(orderRef, order).then((doc)=>{setOrderId(doc.id)});
@@ -28,7 +29,7 @@ export default function Form(){
         return(
             <div className="checkout">
             <h1> Gracias por tu compra</h1>
-            <p> Tu numero de orden es: {orderId}</p>
+            <p> Tu numero de orden es: <strong>{orderId}</strong></p>
             </div>
         )
     }

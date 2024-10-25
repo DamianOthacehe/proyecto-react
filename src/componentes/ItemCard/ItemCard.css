@@ -5,13 +5,8 @@
     border-radius: 8px;
     overflow: hidden;
     background-color: rgb(224, 247, 248);
-    /* transition: transform 0.2s ease, box-shadow 02s ease; */
 }
 
-/* .card:hover{
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-} */
 
 .card-image{
     width: 100%;
@@ -25,7 +20,7 @@
 
 .card-title{
     font-size: 1rem;
-    color: midnightblue;
+    color: darkslategray;
     margin: 0;
     font-weight: bold;
 }
