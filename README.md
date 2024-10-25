@@ -9,7 +9,7 @@ El proyecto utiliza **Firebase** para almacenar datos de productos y gestionar �
 ## Demo
 link al deploy del proyecto
 
-![imagen o gif](www.google.com )
+[gif del proyecto](https://vimeo.com/1023358947/a31d469b2f?share=copy )
 
 ## Características
 - Navegación fácil e intuitiva a través de rutas.

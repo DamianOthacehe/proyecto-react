@@ -34,7 +34,7 @@ export default function CartComponent() {
             {cart.length === 0 ? (
                 <>
                     <h1>El carrito esta vacio 😢</h1>
-                    <button><Link to={"/"} className="button-link">Ver productos</Link></button>
+                    <button className="empty-cart-button"><Link to={"/"} className="button-link">Ver productos</Link></button>
                 </>
             ) : (
                 <>
@@ -42,18 +42,19 @@ export default function CartComponent() {
                     {
                         cart.map((prod) => (
                             <div key={prod.id} className="cart-item">
-                                <h3>{prod.title}</h3>,
+                                <img src={prod.image} alt={prod.title} />
+                                <h3>{prod.title}</h3>
                                 <ItemQuantitySelector
                                     product={prod}
                                     quantity={prod.quantity}
                                     setQuantity={(newQuantity) => handleQuantityChange(prod.id, newQuantity)} />
-                                <p>Precio unitario: ${prod.price}</p>,
+                                <p>Precio unitario: ${prod.price}</p>
                                 <p>Subtotal: ${prod.price * prod.quantity}</p>
                                 <button onClick={() => handleRemove(prod.id)}>Eliminar</button>
                             </div>
                         ))
                     }
-                    <h2 className="cart-total">Total carrito ${total()}</h2>
+                    <h2 className="cart-total">Total: ${total()}</h2>
                     <div className="cart-buttons">
                         <button onClick={handleEmpty}>Vaciar carrito</button>
                         <button><Link to={`/Checkout`} className="button-link">Comprar</Link></button>

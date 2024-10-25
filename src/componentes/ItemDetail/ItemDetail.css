@@ -1,6 +1,5 @@
 .item-detail{
-    max-width: 800px;
-    margin: 2rem auto;
+    margin: 2rem;
     padding: 1.5rem;
     border-radius: 5px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -14,7 +13,13 @@ h1{
 
 .article{
     display: flex;
+    justify-content: space-around;
+}
+
+.text-buttons{
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
@@ -27,6 +32,7 @@ h1{
 }
 
 .title{
+    padding: 2rem;
     font-size: 1.5rem;
     margin-bottom: 0.5rem 0;
     color: darkslategray;
