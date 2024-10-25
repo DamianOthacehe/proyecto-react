@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form"
 import { useContext, useState } from "react";
-import { CartContext } from "../../context/cartContext";
+import { CartContext } from "../../context/CartContext";
 import { collection, addDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
 import './checkout.css'

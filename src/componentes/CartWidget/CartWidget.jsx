@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import './CartWidget.css'
-import { CartContext } from "../../context/cartContext";
+import { CartContext } from "../../context/CartContext";
 import { Link } from "react-router-dom";
 
 
