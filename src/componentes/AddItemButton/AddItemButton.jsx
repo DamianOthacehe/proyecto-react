@@ -4,7 +4,7 @@ import '../itemDetail/itemDetail.css'
 
 export default function AddItemButton({ product, quantity }) {
 
-    const [,,addItem] = useContext(CartContext);
+    const [, , addItem] = useContext(CartContext);
 
     const handleAddToCart = () => {
         addItem({ ...product, quantity });

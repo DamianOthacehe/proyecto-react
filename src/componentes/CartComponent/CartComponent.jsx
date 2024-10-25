@@ -1,6 +1,7 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/cartContext"
 import { Link } from "react-router-dom";
+import ItemQuantitySelector from "../ItemQuantitySelector/ItemQuantitySelector";
 import './CartComponent.css'
 
 
@@ -12,8 +13,20 @@ export default function CartComponent() {
         return cart.reduce((acc, prod) => acc + prod.price * prod.quantity, 0)
     }
 
+    const handleQuantityChange = (id, newQuantity) => {
+        const updatedCart = cart.map(prod =>
+            prod.id === id ? { ...prod, quantity: newQuantity } : prod
+        );
+        setCart(updatedCart);
+    }
+
     const handleEmpty = () => {
         setCart([]);
+    }
+
+    const handleRemove = (id) => {
+        const updatedCart = cart.filter(prod => prod.id !== id);
+        setCart(updatedCart);
     }
 
     return (
@@ -30,9 +43,13 @@ export default function CartComponent() {
                         cart.map((prod) => (
                             <div key={prod.id} className="cart-item">
                                 <h3>{prod.title}</h3>,
-                                <p>Cantidad: {prod.quantity}</p>,
+                                <ItemQuantitySelector
+                                    product={prod}
+                                    quantity={prod.quantity}
+                                    setQuantity={(newQuantity) => handleQuantityChange(prod.id, newQuantity)} />
                                 <p>Precio unitario: ${prod.price}</p>,
                                 <p>Subtotal: ${prod.price * prod.quantity}</p>
+                                <button onClick={() => handleRemove(prod.id)}>Eliminar</button>
                             </div>
                         ))
                     }
