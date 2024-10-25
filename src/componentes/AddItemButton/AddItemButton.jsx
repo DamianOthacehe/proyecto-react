@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
-import '../itemDetail/itemDetail.css'
+import '../ItemDetail/ItemDetail.css'
 
 export default function AddItemButton({ product, quantity }) {
 

@@ -1,4 +1,4 @@
-import '../itemDetail/itemDetail.css'
+import '../ItemDetail/ItemDetail.css'
 
 
 export default function ItemQuantitySelector({ product, quantity, setQuantity }) {

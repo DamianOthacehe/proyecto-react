@@ -4,7 +4,7 @@ import ItemDetail from "../ItemDetail/ItemDetail";
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
 import { FadeLoader } from "react-spinners";
-import '../../app.css'
+import '../../App.css'
 
 
 export default function ItemDetailContainer() {
