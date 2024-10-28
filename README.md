@@ -7,9 +7,11 @@ Esta es una SPA (Single Page Aplication) creada como proyecto final del curso de
 El proyecto utiliza **Firebase** para almacenar datos de productos y gestionar órdenes.
 
 ## Demo
-link al deploy del proyecto
+[Link al deploy del proyecto](https://leinwandcamping.netlify.app/)
 
-[gif del proyecto](https://vimeo.com/1023358947/a31d469b2f?share=copy )
+[Video del proyecto en funcionamiento](https://vimeo.com/1023358947/a31d469b2f?share=copy )
+
+![Home del proyecto](https://res.cloudinary.com/df4akzhzp/image/upload/leinwand_wfmgud.jpg)
 
 ## Características
 - Navegación fácil e intuitiva a través de rutas.
