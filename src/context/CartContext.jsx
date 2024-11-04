@@ -4,7 +4,9 @@ export const CartContext = createContext(false);
 
 export function CartProvider({ children }) {
 
-    const [cart, setCart] = useState([]);
+    const newCart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    const [cart, setCart] = useState(newCart);
 
     const addItem = (item) => {
         const isInCart = cart.findIndex(cartItem => cartItem.id === item.id);
@@ -18,7 +20,7 @@ export function CartProvider({ children }) {
     }
 
     useEffect(() => {
-        console.log(cart);
+        localStorage.setItem("cart", JSON.stringify(cart));
     }, [cart]);
 
     return (
