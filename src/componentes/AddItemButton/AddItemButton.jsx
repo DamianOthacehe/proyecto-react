@@ -2,7 +2,7 @@ import { useContext } from "react"
 import { CartContext } from "../../context/CartContext"
 import '../ItemDetail/ItemDetail.css'
 
-export default function AddItemButton({ product, quantity }) {
+export default function AddItemButton({ product, quantity, disabled }) {
 
     const [, , addItem] = useContext(CartContext);
 
@@ -12,7 +12,9 @@ export default function AddItemButton({ product, quantity }) {
 
     return (
         <>
-            <button className='add-item' onClick={handleAddToCart}>Agregar al carrito</button>
+            <button className="add-item" onClick={() => handleAddToCart(product, quantity)}>
+                Agregar al carrito
+            </button>
         </>
     )
 }

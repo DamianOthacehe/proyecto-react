@@ -1,21 +1,27 @@
 import '../ItemDetail/ItemDetail.css'
 
 
-export default function ItemQuantitySelector({ product, quantity, setQuantity }) {
+export default function ItemQuantitySelector({quantity, setQuantity, maxStock }) {
 
     const handleSubtract = () => {
-        quantity > 1 && setQuantity(quantity - 1);
-    }
+        if (quantity > 1) setQuantity(quantity - 1);
+    };
 
     const handleAdd = () => {
-        quantity < product.stock && setQuantity(quantity + 1);
-    }
+        if (quantity < maxStock) setQuantity(quantity + 1);
+    };
 
     return (
         <div className='quantity-selector' >
-            <button onClick={handleSubtract}>-</button>
+            <button
+            onClick={handleSubtract}
+            disabled={quantity <=1}
+            >-</button>
             <span>{quantity}</span>
-            <button onClick={handleAdd}>+</button>
+            <button
+            onClick={handleAdd}
+            disabled={quantity >= maxStock}
+            >+</button>
         </div>
     )
 }
