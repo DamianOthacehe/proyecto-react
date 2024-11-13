@@ -11,7 +11,7 @@ export default function Form() {
     const [orderId, setOrderId] = useState("");
     const { register, handleSubmit, formState: { errors }, watch } = useForm();
 
-    const [cart, setCart] = useContext(CartContext);
+    const { cart, setCart } = useContext(CartContext);
 
     const email = watch("email");
     const confirmEmail = watch("confirmEmail");
@@ -74,15 +74,9 @@ export default function Form() {
                         id="telefono"
                         placeholder="Telefono"
                         className={errors.telefono ? 'error' : ''}
-                        {...register("telefono", {
-                            pattern: {
-                                value: /^\d{10}$/,
-                                message: "Ingresa un teléfono válido de 10 dígitos"
-                            }
-                        })
+                        {...register("telefono")
                         }
                     />
-                    {errors.telefono && <p className="error-message">{errors.telefono.message}</p>}
 
                     <label htmlFor="email">Ingresa tu e-mail *</label>
                     <input
