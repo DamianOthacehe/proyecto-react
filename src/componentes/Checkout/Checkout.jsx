@@ -14,7 +14,6 @@ export default function Form() {
     const { cart, setCart } = useContext(CartContext);
 
     const email = watch("email");
-    const confirmEmail = watch("confirmEmail");
 
     const send = (data) => {
 
