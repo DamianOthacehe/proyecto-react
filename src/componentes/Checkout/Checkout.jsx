@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form"
 import { useContext, useState } from "react";
 import { CartContext } from "../../context/CartContext";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, doc, updateDoc } from "firebase/firestore";
 import { db } from "../../firebase/firebase";
 import './Checkout.css'
 
@@ -15,7 +15,7 @@ export default function Form() {
 
     const email = watch("email");
 
-    const send = (data) => {
+    const send = async (data) => {
 
         if (data.email !== data.confirmEmail) {
             return;
@@ -28,7 +28,19 @@ export default function Form() {
         setCart([]);
 
         const orderRef = collection(db, "orders");
-        addDoc(orderRef, order).then((doc) => { setOrderId(doc.id) });
+        const docRef = await addDoc(orderRef, order);
+        setOrderId(docRef.id);
+
+        await updateStock(cart);
+    }
+
+    const updateStock = async (cart) => {
+        for (const item of cart) {
+            const itemRef = doc(db, "products", item.id);
+            await updateDoc(itemRef, {
+                stock: item.stock - item.quantity
+            });
+        }
     }
 
     if (orderId) {
