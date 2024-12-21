@@ -30,6 +30,14 @@
     color: white;
 }
 
+.dropdown-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    transition: all 0.3s ease;
+    color: #4772a9;
+}
+
 .active {
     background-color: #355d82;
     color: white;

@@ -1,0 +1,15 @@
+.institucional {
+    padding: 3rem;
+}
+
+.institucional div {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+.institucional div img {
+    width: 40%;
+    border-radius: 10px;
+}
